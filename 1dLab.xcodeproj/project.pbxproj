@@ -28,6 +28,7 @@
 		9368DB3416D460BC00D59A8F /* 1dLab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 1dLab; sourceTree = BUILT_PRODUCTS_DIR; };
 		9368DB3716D460BC00D59A8F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9368DB3916D460BC00D59A8F /* _dLab.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = _dLab.1; sourceTree = "<group>"; };
+		9368DB4016D4625900D59A8F /* makefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				9368DB3716D460BC00D59A8F /* main.cpp */,
+				9368DB4016D4625900D59A8F /* makefile.txt */,
 				9368DB3916D460BC00D59A8F /* _dLab.1 */,
 			);
 			path = 1dLab;
