@@ -31,7 +31,7 @@
 		9368DB3416D460BC00D59A8F /* 1dLab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 1dLab; sourceTree = BUILT_PRODUCTS_DIR; };
 		9368DB3716D460BC00D59A8F /* 1dlife.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1dlife.cc; sourceTree = "<group>"; };
 		9368DB3916D460BC00D59A8F /* _dLab.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = _dLab.1; sourceTree = "<group>"; };
-		9368DB4016D4625900D59A8F /* makefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile.txt; sourceTree = "<group>"; };
+		9368DB4016D4625900D59A8F /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		9368DB4116D463B900D59A8F /* universe.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = universe.cc; sourceTree = "<group>"; };
 		9368DB4216D463B900D59A8F /* universe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = universe.h; sourceTree = "<group>"; };
 		9368DB4416D465D000D59A8F /* entry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = entry.h; sourceTree = "<group>"; };
@@ -74,17 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				9368DB3716D460BC00D59A8F /* 1dlife.cc */,
-				9368DB4016D4625900D59A8F /* makefile.txt */,
 				9368DB4B16D4664400D59A8F /* listnode_inl.h */,
 				9368DB4C16D4664400D59A8F /* listnode.h */,
 				9368DB4816D4662F00D59A8F /* common.cc */,
 				9368DB4916D4662F00D59A8F /* common.h */,
-				9368DB3916D460BC00D59A8F /* _dLab.1 */,
 				9368DB4116D463B900D59A8F /* universe.cc */,
 				9368DB4516D4660200D59A8F /* container.cc */,
 				9368DB4616D4660200D59A8F /* container.h */,
 				9368DB4416D465D000D59A8F /* entry.h */,
 				9368DB4216D463B900D59A8F /* universe.h */,
+				9368DB4016D4625900D59A8F /* makefile */,
+				9368DB3916D460BC00D59A8F /* _dLab.1 */,
 			);
 			path = 1dLab;
 			sourceTree = "<group>";
