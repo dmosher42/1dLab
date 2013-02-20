@@ -58,9 +58,24 @@ void Universe :: populate()
 
 int Universe :: update(Universe *other)
 {
+	other->init_to_empty();
+	other->begin = begin;
+	other->end = end;
+    
 	// a trivial update operation which copies to the next generation.
-	update_from_copy(*other);
-	other->generation++;
+	for(int i = begin; i <= end; i++)
+	{
+		if(cells.get(i) == ALIVE)
+		{
+			other->cells.insert(update_live(i));
+		}
+		else
+		{
+			other->cells.insert(update_dead(i));
+		}
+	}
+	
+	other->generation = generation + 1;
 	return other->generation - MAXGEN;
 }
 
@@ -83,3 +98,100 @@ void Universe :: update_from_copy(Universe &other)
 	other.end = end;
 }
 
+Entry Universe :: update_live(Coordinate p) const
+{
+	int sum = 0;
+	
+	if((p - begin) < 2)
+	{
+		if((p - begin) == 1)
+		{
+			sum+= cells.get(p - 1);
+		}
+	}
+	else
+	{
+		sum += cells.get(p - 2);
+		sum += cells.get(p - 1);
+	}
+	
+	if((end - p) < 2)
+	{
+		if((end - p) == 1)
+		{
+			sum += cells.get(p + 1);
+		}
+	}
+	else
+	{
+		sum += cells.get(p + 1);
+		sum += cells.get(p + 2);
+	}
+	
+	if(sum == 0 || sum == 1 || sum == 3)
+	{
+		return DEAD;
+	}
+	else
+	{
+		return ALIVE;
+	}
+    
+}
+
+Entry Universe :: update_dead(Coordinate p) const
+{
+	int sum = 0;
+    
+	if((p - begin) < 2)
+	{
+		if((p - begin) == 1)
+		{
+			sum+= cells.get(p - 1);
+		}
+	}
+	else
+	{
+		sum += cells.get(p - 2);
+		sum += cells.get(p - 1);
+	}
+	
+	if((end - p) < 2)
+	{
+		if((end - p) == 1)
+		{
+			sum += cells.get(p + 1);
+		}
+	}
+	else
+	{
+		sum += cells.get(p + 1);
+		sum += cells.get(p + 2);
+	}
+    
+	if(sum == 2 || sum == 3)
+	{
+		return ALIVE;
+	}
+	else
+	{
+		return DEAD;
+	}
+}
+
+int Universe :: count_cells(Coordinate start, Coordinate stop) const
+{
+	int sum = 0;
+	
+	for(int i = start; (i <= stop) && (i <= end); i++)
+	{
+		sum += cells.get(i);
+	}
+	
+	return sum;
+}
+
+int Universe :: eval_cell(Coordinate p) const
+{
+	return cells.get(p);
+}

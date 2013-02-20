@@ -179,7 +179,7 @@ void Container :: replace(Entry x, Position p)
 
 /*******************************************************************/
 /*                                                                 */
-/*  Container private helper functions                                  */
+/*  Container private helper functions                             */
 /*                                                                 */
 /*******************************************************************/
 

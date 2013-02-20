@@ -1,14 +1,42 @@
-//
-//  listnode_inl.h
-//  Lab2.2
-//
-//  Created by Dee on 2/12/13.
-//  Copyright (c) 2013 Dee. All rights reserved.
-//
 
-#ifndef Lab2_2_listnode_inl_h
-#define Lab2_2_listnode_inl_h
+/*  File: listnode_inl.h
+ *  Date: 12 Feb 13
+ *  Rev:
+ *
+ *   Listnode inline functions
+ */
 
+#ifndef LISTNODE_INL_H
+#define LISTNODE_INL_H
 
+#include <stdlib.h>
+#include "entry.h"
+
+inline ListNode::ListNode(Entry x)
+{
+	entry = x;
+    
+	next = NULL;
+}
+
+inline Entry ListNode::getdata() const
+{
+	return entry;
+}
+
+inline ListNode* ListNode::getnext() const
+{
+	return next;
+}
+
+inline void ListNode::setdata(Entry x)
+{
+	entry = x;
+}
+
+inline void ListNode::setnext(ListNode *n)
+{
+	next = n;
+}
 
 #endif
