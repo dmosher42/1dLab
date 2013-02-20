@@ -9,7 +9,7 @@
 #include "universe.h"
 
 
-main()
+int main()
 {
     Universe U1, U2;
     Universe *currgen = &U1;
